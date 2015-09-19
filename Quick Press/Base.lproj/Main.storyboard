@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fBd-Do-Xdj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -7,10 +7,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oED-PZ-sej"/>
                         <viewControllerLayoutGuide type="bottom" id="abm-pn-MZE"/>
@@ -27,53 +27,60 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzc-KN-5q2">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <rect key="frame" x="-3" y="0.0" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855769230773" green="0.68032710393895601" blue="0.078126758807215965" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="pzc-KN-5q2" secondAttribute="height" multiplier="1:1" id="fYa-jX-FZj"/>
+                                    <constraint firstAttribute="width" secondItem="pzc-KN-5q2" secondAttribute="height" multiplier="1:1" id="Xxd-Nj-dLh"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="orange_box_play">
+                                <state key="normal" image="orange_box_play">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m85-cP-dk0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-JS-Ozq">
-                                <rect key="frame" x="300" y="300" width="300" height="300"/>
+                                <rect key="frame" x="297" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WUP-JS-Ozq" secondAttribute="height" multiplier="1:1" id="Mf2-it-6Lo"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="28" height="4"/>
-                                <state key="normal" title="HOW TO" image="grey_box_howto">
+                                <state key="normal" image="grey_box_howto">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressHowtoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXA-cu-n3L"/>
+                                    <action selector="didPressPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Hn-2E-M0a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WUP-JS-Ozq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="1TP-Jg-geE"/>
+                            <constraint firstItem="WUP-JS-Ozq" firstAttribute="leading" secondItem="pzc-KN-5q2" secondAttribute="trailing" id="1jM-l6-ofD"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="hiM-yE-32M" secondAttribute="trailing" id="88l-zz-voz"/>
-                            <constraint firstItem="WUP-JS-Ozq" firstAttribute="top" secondItem="pzc-KN-5q2" secondAttribute="bottom" id="FzH-GI-beo"/>
                             <constraint firstItem="hiM-yE-32M" firstAttribute="top" secondItem="oED-PZ-sej" secondAttribute="bottom" constant="50" id="LeW-ts-og6"/>
-                            <constraint firstItem="pzc-KN-5q2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MEB-Hv-ynB"/>
-                            <constraint firstItem="WUP-JS-Ozq" firstAttribute="width" secondItem="pzc-KN-5q2" secondAttribute="width" id="Q6t-XG-efZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WUP-JS-Ozq" secondAttribute="trailing" constant="-20" id="S2p-7y-w1D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WUP-JS-Ozq" secondAttribute="trailing" constant="-17" id="S2p-7y-w1D"/>
+                            <constraint firstItem="pzc-KN-5q2" firstAttribute="width" secondItem="WUP-JS-Ozq" secondAttribute="width" id="WVe-Jw-R2q"/>
+                            <constraint firstItem="WUP-JS-Ozq" firstAttribute="top" secondItem="pzc-KN-5q2" secondAttribute="bottom" id="b8A-Wa-Tev"/>
                             <constraint firstItem="hiM-yE-32M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbZ-0E-8hk"/>
-                            <constraint firstItem="pzc-KN-5q2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="end-ud-v7S"/>
                             <constraint firstItem="abm-pn-MZE" firstAttribute="top" secondItem="WUP-JS-Ozq" secondAttribute="bottom" id="iqg-NH-vsa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="fBd-Do-Xdj" kind="presentation" identifier="mainMenuToTransitionMenu" id="Ud9-em-2av"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="336"/>
+            <point key="canvasLocation" x="-148" y="207"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="2gw-Gm-UHr">
             <objects>
-                <viewController id="lHG-YS-dtt" sceneMemberID="viewController">
+                <viewController id="lHG-YS-dtt" customClass="GameViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DfP-HC-Dgf"/>
                         <viewControllerLayoutGuide type="bottom" id="605-7Z-X74"/>
@@ -85,37 +92,31 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-cu-HDK">
                                 <rect key="frame" x="0.0" y="400" width="300" height="200"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="grey_box"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqo-jE-rMD">
                                 <rect key="frame" x="300" y="200" width="300" height="200"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="orange_box"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-Kt-eEP">
                                 <rect key="frame" x="300" y="400" width="300" height="200"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="grey_box"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywI-A7-zbi">
                                 <rect key="frame" x="0.0" y="200" width="300" height="200"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="grey_box"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-5A-7Ty">
                                 <rect key="frame" x="300" y="0.0" width="300" height="200"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855770000002" green="0.68032710389999995" blue="0.078126758810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="grey_box"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-J8-tcg">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="grey_box"/>
                             </button>
                         </subviews>
@@ -148,15 +149,18 @@
                             <constraint firstItem="7Tn-cu-HDK" firstAttribute="leading" secondItem="VgD-3B-lfV" secondAttribute="leadingMargin" constant="-20" id="yrd-jI-Bdp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="azg-3j-72q" kind="presentation" id="oZb-K9-PhO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7q-V2-w4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="1006"/>
+            <point key="canvasLocation" x="1232" y="212"/>
         </scene>
-        <!--View Controller-->
+        <!--Transition View Controller-->
         <scene sceneID="BeK-0q-U80">
             <objects>
-                <viewController id="fBd-Do-Xdj" customClass="ViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fBd-Do-Xdj" customClass="TransitionViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0xV-V1-3eh"/>
                         <viewControllerLayoutGuide type="bottom" id="xmQ-4A-V6B"/>
@@ -175,45 +179,41 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z54-Hy-vxe">
                                 <rect key="frame" x="3" y="0.0" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855770000002" green="0.68032710389999995" blue="0.078126758810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="z54-Hy-vxe" secondAttribute="height" multiplier="1:1" id="u6q-Eq-vcb"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="orange_box_play">
+                                <state key="normal" image="orange_box_classic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RII-wC-VWK">
                                 <rect key="frame" x="3" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855770000002" green="0.68032710389999995" blue="0.078126758810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RII-wC-VWK" secondAttribute="height" multiplier="1:1" id="oe4-hv-k4D"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="orange_box_play">
+                                <state key="normal" image="orange_box_speed">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB9-kU-qTc">
                                 <rect key="frame" x="303" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tB9-kU-qTc" secondAttribute="height" multiplier="1:1" id="eLF-s8-FZ4"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="28" height="4"/>
-                                <state key="normal" title="HOW TO" image="grey_box_howto">
+                                <state key="normal" image="orange_box_back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1j-Nu-rXK">
-                                <rect key="frame" x="329" y="-11" width="293" height="293"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1j-Nu-rXK">
+                                <rect key="frame" x="303" y="0.0" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855770000002" green="0.68032710389999995" blue="0.078126758810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="z1j-Nu-rXK" secondAttribute="height" multiplier="1:1" id="226-2I-8lB"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="orange_box_play">
+                                <state key="normal" image="orange_box_burst">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -239,15 +239,19 @@
                             <constraint firstItem="xK8-Eu-rra" firstAttribute="top" secondItem="0xV-V1-3eh" secondAttribute="bottom" constant="50" id="u5E-NK-7p5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="wLP-19-LUt" kind="presentation" id="pbD-uM-qS5"/>
+                        <segue destination="lHG-YS-dtt" kind="presentation" id="dU6-lC-irw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ome-RH-dUP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="419"/>
+            <point key="canvasLocation" x="560" y="212"/>
         </scene>
-        <!--View Controller-->
+        <!--Howto View Controller-->
         <scene sceneID="WY2-zW-fTn">
             <objects>
-                <viewController id="wLP-19-LUt" customClass="ViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wLP-19-LUt" customClass="HowtoViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E2W-ZF-k27"/>
                         <viewControllerLayoutGuide type="bottom" id="xgn-37-L1k"/>
@@ -266,23 +270,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN2-N4-OoD">
                                 <rect key="frame" x="3" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855770000002" green="0.68032710389999995" blue="0.078126758810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TN2-N4-OoD" secondAttribute="height" multiplier="1:1" id="DCs-1n-QGV"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="orange_box_play">
+                                <state key="normal" image="orange_box_play">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4c-sm-lEu">
                                 <rect key="frame" x="303" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F4c-sm-lEu" secondAttribute="height" multiplier="1:1" id="hG2-N9-fIU"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="28" height="4"/>
-                                <state key="normal" title="HOW TO" image="grey_box_howto">
+                                <state key="normal" image="grey_box_howto">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -316,12 +318,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2a-V5-NyR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621" y="419"/>
+            <point key="canvasLocation" x="560" y="895"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Menu View Controller-->
         <scene sceneID="GJN-O6-zNB">
             <objects>
-                <viewController id="azg-3j-72q" customClass="ViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="azg-3j-72q" customClass="PostMenuViewController" customModule="Quick_Press" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gyr-Oy-WNM"/>
                         <viewControllerLayoutGuide type="bottom" id="usn-Lc-9nG"/>
@@ -331,35 +333,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="t8m-qV-Pi0">
-                                <rect key="frame" x="110" y="70" width="381.5" height="71"/>
+                                <rect key="frame" x="136.5" y="70" width="329" height="71"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="62"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="uqJ-LT-qyo">
+                                <rect key="frame" x="228" y="161" width="145" height="34.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-m1-Dlz">
                                 <rect key="frame" x="3" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93034855770000002" green="0.68032710389999995" blue="0.078126758810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Yvf-m1-Dlz" secondAttribute="height" multiplier="1:1" id="OD4-hG-wCj"/>
                                 </constraints>
-                                <state key="normal" title="PLAY" image="orange_box_play">
+                                <state key="normal" image="orange_box_playagain">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIp-K6-Xl4">
                                 <rect key="frame" x="303" y="300" width="300" height="300"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DIp-K6-Xl4" secondAttribute="height" multiplier="1:1" id="4GI-uU-qPc"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="28" height="4"/>
-                                <state key="normal" title="HOW TO" image="grey_box_howto">
+                                <state key="normal" image="orange_box_back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST: 34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="als-sE-eAO">
+                                <rect key="frame" x="258.5" y="205.5" width="114.5" height="34.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -368,24 +382,41 @@
                             <constraint firstItem="DIp-K6-Xl4" firstAttribute="leading" secondItem="Yvf-m1-Dlz" secondAttribute="trailing" id="1p4-3w-0BJ"/>
                             <constraint firstItem="t8m-qV-Pi0" firstAttribute="centerX" secondItem="5iU-do-Ufs" secondAttribute="centerX" id="3UU-kW-WCH"/>
                             <constraint firstItem="t8m-qV-Pi0" firstAttribute="top" secondItem="gyr-Oy-WNM" secondAttribute="bottom" constant="50" id="8Xr-9l-Jdk"/>
+                            <constraint firstItem="als-sE-eAO" firstAttribute="top" secondItem="uqJ-LT-qyo" secondAttribute="bottom" constant="10" id="Cgd-Ik-o36"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="uqJ-LT-qyo" secondAttribute="trailing" id="Kuz-kh-g31"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="t8m-qV-Pi0" secondAttribute="trailing" id="ROn-x2-5kr"/>
                             <constraint firstItem="Yvf-m1-Dlz" firstAttribute="width" secondItem="Yvf-m1-Dlz" secondAttribute="height" multiplier="1:1" id="Ryh-AB-6Qc"/>
                             <constraint firstItem="Yvf-m1-Dlz" firstAttribute="width" secondItem="5iU-do-Ufs" secondAttribute="width" multiplier="0.5" id="dTk-X1-GGN"/>
                             <constraint firstItem="usn-Lc-9nG" firstAttribute="top" secondItem="Yvf-m1-Dlz" secondAttribute="bottom" id="djG-oI-gxA"/>
                             <constraint firstItem="usn-Lc-9nG" firstAttribute="top" secondItem="DIp-K6-Xl4" secondAttribute="bottom" id="gMl-y1-Cxu"/>
+                            <constraint firstItem="als-sE-eAO" firstAttribute="trailing" secondItem="uqJ-LT-qyo" secondAttribute="trailing" id="jmb-OS-pck"/>
+                            <constraint firstItem="uqJ-LT-qyo" firstAttribute="centerX" secondItem="5iU-do-Ufs" secondAttribute="centerX" id="kKM-ei-aGZ"/>
                             <constraint firstItem="Yvf-m1-Dlz" firstAttribute="leading" secondItem="5iU-do-Ufs" secondAttribute="leadingMargin" constant="-17" id="sHN-4I-wxH"/>
+                            <constraint firstItem="uqJ-LT-qyo" firstAttribute="top" secondItem="t8m-qV-Pi0" secondAttribute="bottom" constant="20" id="ukm-VV-htS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="lHG-YS-dtt" kind="presentation" id="Q2B-4c-l7x"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" id="9yp-or-PZe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptg-oN-LaF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584" y="1084"/>
+            <point key="canvasLocation" x="1882" y="207"/>
         </scene>
     </scenes>
     <resources>
         <image name="grey_box" width="250" height="250"/>
         <image name="grey_box_howto" width="250" height="250"/>
         <image name="orange_box" width="250" height="250"/>
+        <image name="orange_box_back" width="250" height="250"/>
+        <image name="orange_box_burst" width="250" height="250"/>
+        <image name="orange_box_classic" width="250" height="250"/>
         <image name="orange_box_play" width="250" height="250"/>
+        <image name="orange_box_playagain" width="250" height="250"/>
+        <image name="orange_box_speed" width="250" height="250"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q2B-4c-l7x"/>
+    </inferredMetricsTieBreakers>
 </document>

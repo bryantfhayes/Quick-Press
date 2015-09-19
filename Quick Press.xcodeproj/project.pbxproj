@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A45000C81BACE1AC00700FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45000C71BACE1AC00700FDB /* AppDelegate.swift */; };
-		A45000CA1BACE1AC00700FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45000C91BACE1AC00700FDB /* ViewController.swift */; };
+		A45000CA1BACE1AC00700FDB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45000C91BACE1AC00700FDB /* MainMenuViewController.swift */; };
 		A45000CD1BACE1AC00700FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45000CB1BACE1AC00700FDB /* Main.storyboard */; };
 		A45000CF1BACE1AC00700FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45000CE1BACE1AC00700FDB /* Assets.xcassets */; };
 		A45000D21BACE1AC00700FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45000D01BACE1AC00700FDB /* LaunchScreen.storyboard */; };
 		A45000DD1BACE1AD00700FDB /* Quick_PressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45000DC1BACE1AD00700FDB /* Quick_PressTests.swift */; };
 		A45000E81BACE1AD00700FDB /* Quick_PressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45000E71BACE1AD00700FDB /* Quick_PressUITests.swift */; };
+		A4B2D3FE1BAE212F00A82FAE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2D3FD1BAE212F00A82FAE /* GameViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A4B2D4001BAE213C00A82FAE /* PostMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2D3FF1BAE213C00A82FAE /* PostMenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A4B2D4021BAE217100A82FAE /* HowtoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2D4011BAE217100A82FAE /* HowtoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A4B2D4041BAE218700A82FAE /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2D4031BAE218700A82FAE /* TransitionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		A45000C41BACE1AC00700FDB /* Quick Press.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Press.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45000C71BACE1AC00700FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A45000C91BACE1AC00700FDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A45000C91BACE1AC00700FDB /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		A45000CC1BACE1AC00700FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A45000CE1BACE1AC00700FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A45000D11BACE1AC00700FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		A45000E31BACE1AD00700FDB /* Quick PressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quick PressUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45000E71BACE1AD00700FDB /* Quick_PressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quick_PressUITests.swift; sourceTree = "<group>"; };
 		A45000E91BACE1AD00700FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B2D3FD1BAE212F00A82FAE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A4B2D3FF1BAE213C00A82FAE /* PostMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMenuViewController.swift; sourceTree = "<group>"; };
+		A4B2D4011BAE217100A82FAE /* HowtoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowtoViewController.swift; sourceTree = "<group>"; };
+		A4B2D4031BAE218700A82FAE /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				A45000C71BACE1AC00700FDB /* AppDelegate.swift */,
-				A45000C91BACE1AC00700FDB /* ViewController.swift */,
+				A4B2D4031BAE218700A82FAE /* TransitionViewController.swift */,
+				A45000C91BACE1AC00700FDB /* MainMenuViewController.swift */,
+				A4B2D3FD1BAE212F00A82FAE /* GameViewController.swift */,
+				A4B2D3FF1BAE213C00A82FAE /* PostMenuViewController.swift */,
 				A45000CB1BACE1AC00700FDB /* Main.storyboard */,
+				A4B2D4011BAE217100A82FAE /* HowtoViewController.swift */,
 				A45000CE1BACE1AC00700FDB /* Assets.xcassets */,
 				A45000D01BACE1AC00700FDB /* LaunchScreen.storyboard */,
 				A45000D31BACE1AC00700FDB /* Info.plist */,
@@ -255,8 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A45000CA1BACE1AC00700FDB /* ViewController.swift in Sources */,
+				A4B2D3FE1BAE212F00A82FAE /* GameViewController.swift in Sources */,
+				A4B2D4041BAE218700A82FAE /* TransitionViewController.swift in Sources */,
+				A45000CA1BACE1AC00700FDB /* MainMenuViewController.swift in Sources */,
+				A4B2D4021BAE217100A82FAE /* HowtoViewController.swift in Sources */,
 				A45000C81BACE1AC00700FDB /* AppDelegate.swift in Sources */,
+				A4B2D4001BAE213C00A82FAE /* PostMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +497,7 @@
 				A45000EE1BACE1AD00700FDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A45000EF1BACE1AD00700FDB /* Build configuration list for PBXNativeTarget "Quick PressTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +506,7 @@
 				A45000F11BACE1AD00700FDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A45000F21BACE1AD00700FDB /* Build configuration list for PBXNativeTarget "Quick PressUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +515,7 @@
 				A45000F41BACE1AD00700FDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
