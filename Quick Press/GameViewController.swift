@@ -39,19 +39,19 @@ class GameViewController: UIViewController {
     var gamemode: Gamemode?
     var updateTimer: NSTimer?
     var buttonStates: [ButtonState] = [ButtonState.grey, ButtonState.grey, ButtonState.grey, ButtonState.grey, ButtonState.grey, ButtonState.grey]
-    var lastLitButtonIndex: Int?
+    var lastLitButtonIndex: Int = 0
 
     var maxTimeToPress: Double = 2.0
-    var maxDelayTime: Double = 4.0
+    var maxDelayTime: Double = 1.0
     var minTimeToPress: Double = 0.10
-    var minDelayTime: Double = 0.25
+    var minDelayTime: Double = 0.10
     var updateInterval: Double = 0.01
     var redFrequency: Double = 0.50
     var delayTimeReductionFactor: Double = 0.9
     var timeToPressReductionFactor: Double = 0.9
     
     var timeLeftToPress: Double = 2.0
-    var timeLeftToDelay: Double = 4.0
+    var timeLeftToDelay: Double = 1.0
     var score: Int = 0
     var previousScore: Int = 0
     
@@ -113,7 +113,10 @@ class GameViewController: UIViewController {
         
         if currentState == GameState.WaitingForButton {
             if timeLeftToDelay <= 0 {
-                let idx = Int(arc4random_uniform(6))
+                var idx = 0
+                repeat {
+                    idx = Int(arc4random_uniform(6))
+                } while idx == lastLitButtonIndex
                 let state: ButtonState = randomState()
                 setButtonState(idx, state: state)
                 lastLitButtonIndex = idx
@@ -134,7 +137,7 @@ class GameViewController: UIViewController {
             timeLeftToPress -= updateInterval
         } else if currentState == GameState.WaitingForRedTimeout {
             if timeLeftToPress <= 0 {
-                setButtonState(lastLitButtonIndex!, state: ButtonState.grey)
+                setButtonState(lastLitButtonIndex, state: ButtonState.grey)
                 currentState = GameState.WaitingForButton
                 timeLeftToPress = maxTimeToPress
                 score += 1
@@ -152,7 +155,7 @@ class GameViewController: UIViewController {
             if sender.tag == lastLitButtonIndex {
                 currentState = GameState.WaitingForButton
                 timeLeftToPress = maxTimeToPress
-                setButtonState(lastLitButtonIndex!, state: ButtonState.grey)
+                setButtonState(lastLitButtonIndex, state: ButtonState.grey)
                 score += 1
             } else {
                 lose()
