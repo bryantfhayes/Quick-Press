@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUICK PRESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="hiM-yE-32M">
-                                <rect key="frame" x="114.5" y="70" width="371" height="71"/>
+                                <rect key="frame" x="115" y="70" width="371" height="71"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzc-KN-5q2">
-                                <rect key="frame" x="-3" y="0.0" width="300" height="300"/>
+                                <rect key="frame" x="-2" y="0.0" width="300" height="300"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pzc-KN-5q2" secondAttribute="height" multiplier="1:1" id="Xxd-Nj-dLh"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-JS-Ozq">
-                                <rect key="frame" x="297" y="300" width="300" height="300"/>
+                                <rect key="frame" x="298" y="300" width="300" height="300"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WUP-JS-Ozq" secondAttribute="height" multiplier="1:1" id="Mf2-it-6Lo"/>
@@ -50,8 +50,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPressHowtoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXA-cu-n3L"/>
-                                    <action selector="didPressPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Hn-2E-M0a"/>
+                                    <action selector="didPressHowtoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ge-6v-QrX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +61,7 @@
                             <constraint firstItem="WUP-JS-Ozq" firstAttribute="leading" secondItem="pzc-KN-5q2" secondAttribute="trailing" id="1jM-l6-ofD"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="hiM-yE-32M" secondAttribute="trailing" id="88l-zz-voz"/>
                             <constraint firstItem="hiM-yE-32M" firstAttribute="top" secondItem="oED-PZ-sej" secondAttribute="bottom" constant="50" id="LeW-ts-og6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WUP-JS-Ozq" secondAttribute="trailing" constant="-17" id="S2p-7y-w1D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WUP-JS-Ozq" secondAttribute="trailing" constant="-18" id="S2p-7y-w1D"/>
                             <constraint firstItem="pzc-KN-5q2" firstAttribute="width" secondItem="WUP-JS-Ozq" secondAttribute="width" id="WVe-Jw-R2q"/>
                             <constraint firstItem="WUP-JS-Ozq" firstAttribute="top" secondItem="pzc-KN-5q2" secondAttribute="bottom" id="b8A-Wa-Tev"/>
                             <constraint firstItem="hiM-yE-32M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbZ-0E-8hk"/>
@@ -70,7 +69,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="fBd-Do-Xdj" kind="presentation" identifier="mainMenuToTransitionMenu" id="Ud9-em-2av"/>
+                        <segue destination="fBd-Do-Xdj" kind="presentation" identifier="mainMenuToTransitionMenu" modalTransitionStyle="crossDissolve" id="Ud9-em-2av"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,35 +88,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-cu-HDK">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tn-cu-HDK">
                                 <rect key="frame" x="0.0" y="400" width="300" height="200"/>
                                 <animations/>
                                 <state key="normal" image="grey_box"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="lHG-YS-dtt" eventType="touchDown" id="zEx-zv-Vfe"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqo-jE-rMD">
-                                <rect key="frame" x="300" y="200" width="300" height="200"/>
-                                <animations/>
-                                <state key="normal" image="orange_box"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-Kt-eEP">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-Kt-eEP">
                                 <rect key="frame" x="300" y="400" width="300" height="200"/>
                                 <animations/>
                                 <state key="normal" image="grey_box"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="lHG-YS-dtt" eventType="touchDown" id="JYA-l1-TA6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywI-A7-zbi">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywI-A7-zbi">
                                 <rect key="frame" x="0.0" y="200" width="300" height="200"/>
                                 <animations/>
                                 <state key="normal" image="grey_box"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="lHG-YS-dtt" eventType="touchDown" id="mBr-BS-NEE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-5A-7Ty">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-5A-7Ty">
                                 <rect key="frame" x="300" y="0.0" width="300" height="200"/>
                                 <animations/>
                                 <state key="normal" image="grey_box"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="lHG-YS-dtt" eventType="touchDown" id="wTO-c3-AQF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-J8-tcg">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                                 <animations/>
                                 <state key="normal" image="grey_box"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="lHG-YS-dtt" eventType="touchDown" id="RTw-E4-CnP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqo-jE-rMD">
+                                <rect key="frame" x="300" y="200" width="300" height="200"/>
+                                <animations/>
+                                <state key="normal" image="grey_box"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="lHG-YS-dtt" eventType="touchDown" id="HTJ-dT-OdZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -150,12 +167,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="azg-3j-72q" kind="presentation" id="oZb-K9-PhO"/>
+                        <outletCollection property="buttons" destination="uLy-J8-tcg" collectionClass="NSMutableArray" id="DMT-W5-8ji"/>
+                        <outletCollection property="buttons" destination="hL4-5A-7Ty" collectionClass="NSMutableArray" id="1Vq-BM-A4D"/>
+                        <outletCollection property="buttons" destination="ywI-A7-zbi" collectionClass="NSMutableArray" id="1is-B4-6c7"/>
+                        <outletCollection property="buttons" destination="tqo-jE-rMD" collectionClass="NSMutableArray" id="mFc-pv-axp"/>
+                        <outletCollection property="buttons" destination="7Tn-cu-HDK" collectionClass="NSMutableArray" id="8Qe-N8-nzJ"/>
+                        <outletCollection property="buttons" destination="wQ9-Kt-eEP" collectionClass="NSMutableArray" id="vFY-Ba-bQh"/>
+                        <segue destination="azg-3j-72q" kind="presentation" identifier="gameMenuToPostMenu" id="oZb-K9-PhO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7q-V2-w4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232" y="212"/>
+            <point key="canvasLocation" x="1387" y="212"/>
         </scene>
         <!--Transition View Controller-->
         <scene sceneID="BeK-0q-U80">
@@ -170,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="xK8-Eu-rra">
-                                <rect key="frame" x="110" y="70" width="381.5" height="71"/>
+                                <rect key="frame" x="110" y="70" width="382" height="71"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,6 +208,9 @@
                                 <state key="normal" image="orange_box_classic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressClassicButton:" destination="fBd-Do-Xdj" eventType="touchUpInside" id="qTG-gU-k5Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RII-wC-VWK">
                                 <rect key="frame" x="3" y="300" width="300" height="300"/>
@@ -195,6 +221,9 @@
                                 <state key="normal" image="orange_box_speed">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressSpeedButton:" destination="fBd-Do-Xdj" eventType="touchUpInside" id="5Ga-L4-fbk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB9-kU-qTc">
                                 <rect key="frame" x="303" y="300" width="300" height="300"/>
@@ -206,6 +235,9 @@
                                 <state key="normal" image="orange_box_back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBackButton:" destination="fBd-Do-Xdj" eventType="touchUpInside" id="ubZ-dP-KKu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1j-Nu-rXK">
                                 <rect key="frame" x="303" y="0.0" width="300" height="300"/>
@@ -216,6 +248,9 @@
                                 <state key="normal" image="orange_box_burst">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBurstButton:" destination="fBd-Do-Xdj" eventType="touchUpInside" id="IbN-BT-sIn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -240,8 +275,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="wLP-19-LUt" kind="presentation" id="pbD-uM-qS5"/>
-                        <segue destination="lHG-YS-dtt" kind="presentation" id="dU6-lC-irw"/>
+                        <outlet property="titleLabel" destination="xK8-Eu-rra" id="tiX-Z5-0En"/>
+                        <segue destination="wLP-19-LUt" kind="presentation" identifier="transitionMenuToHowtoMenu" modalTransitionStyle="crossDissolve" id="pbD-uM-qS5"/>
+                        <segue destination="lHG-YS-dtt" kind="presentation" identifier="transitionMenuToGameMenu" id="dU6-lC-irw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ome-RH-dUP" sceneMemberID="firstResponder"/>
@@ -260,13 +296,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="ary-ki-KnI">
-                                <rect key="frame" x="110" y="70" width="381.5" height="71"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="62"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN2-N4-OoD">
                                 <rect key="frame" x="3" y="300" width="300" height="300"/>
                                 <animations/>
@@ -276,6 +305,9 @@
                                 <state key="normal" image="orange_box_play">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressPlayButton:" destination="wLP-19-LUt" eventType="touchUpInside" id="PfT-wb-bkd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4c-sm-lEu">
                                 <rect key="frame" x="303" y="300" width="300" height="300"/>
@@ -284,15 +316,25 @@
                                     <constraint firstAttribute="width" secondItem="F4c-sm-lEu" secondAttribute="height" multiplier="1:1" id="hG2-N9-fIU"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="28" height="4"/>
-                                <state key="normal" image="grey_box_howto">
+                                <state key="normal" image="orange_box_back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBackButton:" destination="wLP-19-LUt" eventType="touchUpInside" id="Uit-Ha-k54"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BL-bI-DGP">
-                                <rect key="frame" x="20" y="149" width="560" height="143"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BL-bI-DGP">
+                                <rect key="frame" x="20" y="149" width="560" height="69"/>
                                 <animations/>
                                 <string key="text">The rules to this game are simple, press the square that turns orange as fast as you can. If you don't touch it fast rnough, or you touch a red square you lose. The longer you play, the faster you must press. </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="ary-ki-KnI">
+                                <rect key="frame" x="183" y="70" width="234" height="71"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -315,10 +357,15 @@
                             <constraint firstItem="ary-ki-KnI" firstAttribute="top" secondItem="E2W-ZF-k27" secondAttribute="bottom" constant="50" id="wjc-qb-Gz2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="2BL-bI-DGP" id="2L0-45-wVv"/>
+                        <outlet property="titleLabel" destination="ary-ki-KnI" id="RFD-9b-NcE"/>
+                        <segue destination="lHG-YS-dtt" kind="presentation" identifier="howtoMenuToGameMenu" id="2jP-i3-Cv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2a-V5-NyR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="560" y="895"/>
+            <point key="canvasLocation" x="560" y="1075"/>
         </scene>
         <!--Post Menu View Controller-->
         <scene sceneID="GJN-O6-zNB">
@@ -332,15 +379,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="t8m-qV-Pi0">
-                                <rect key="frame" x="136.5" y="70" width="329" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="t8m-qV-Pi0">
+                                <rect key="frame" x="136" y="70" width="329" height="71"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="uqJ-LT-qyo">
-                                <rect key="frame" x="228" y="161" width="145" height="34.5"/>
+                                <rect key="frame" x="228" y="161" width="145" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -355,6 +402,9 @@
                                 <state key="normal" image="orange_box_playagain">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressPlayButton:" destination="azg-3j-72q" eventType="touchUpInside" id="TgZ-ng-Q20"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIp-K6-Xl4">
                                 <rect key="frame" x="303" y="300" width="300" height="300"/>
@@ -366,9 +416,12 @@
                                 <state key="normal" image="orange_box_back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressBackButton:" destination="azg-3j-72q" eventType="touchUpInside" id="u1d-tT-cVL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST: 34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="als-sE-eAO">
-                                <rect key="frame" x="258.5" y="205.5" width="114.5" height="34.5"/>
+                                <rect key="frame" x="259" y="206" width="114" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -396,19 +449,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="lHG-YS-dtt" kind="presentation" id="Q2B-4c-l7x"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="9yp-or-PZe"/>
+                        <outlet property="bestScoreLabel" destination="als-sE-eAO" id="WCc-ao-H4w"/>
+                        <outlet property="scoreLabel" destination="uqJ-LT-qyo" id="Vg5-NX-vhJ"/>
+                        <segue destination="lHG-YS-dtt" kind="presentation" identifier="postMenuToGameMenu" id="Q2B-4c-l7x"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="postMenuToMainMenu" id="9yp-or-PZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptg-oN-LaF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1882" y="207"/>
+            <point key="canvasLocation" x="2230" y="207"/>
         </scene>
     </scenes>
     <resources>
         <image name="grey_box" width="250" height="250"/>
         <image name="grey_box_howto" width="250" height="250"/>
-        <image name="orange_box" width="250" height="250"/>
         <image name="orange_box_back" width="250" height="250"/>
         <image name="orange_box_burst" width="250" height="250"/>
         <image name="orange_box_classic" width="250" height="250"/>
