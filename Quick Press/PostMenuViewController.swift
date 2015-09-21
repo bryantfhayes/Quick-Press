@@ -16,6 +16,7 @@ class PostMenuViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var bestScoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +33,8 @@ class PostMenuViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    // MARK: - UI Action Methods
     
     @IBAction func didPressBackButton(sender: AnyObject) {
         performSegueWithIdentifier(Segue.PostToMain.rawValue, sender: nil)

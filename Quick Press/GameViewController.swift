@@ -41,6 +41,7 @@ class GameViewController: UIViewController {
     var buttonStates: [ButtonState] = [ButtonState.grey, ButtonState.grey, ButtonState.grey, ButtonState.grey, ButtonState.grey, ButtonState.grey]
     var lastLitButtonIndex: Int = 0
 
+    // MARK: - Game Settings
     var maxTimeToPress: Double = 2.0
     var maxDelayTime: Double = 1.0
     var minTimeToPress: Double = 0.10
@@ -85,6 +86,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    // Generate either an Orange or Red button event
     func randomState() -> ButtonState {
         let tmp: Int = Int(redFrequency * 100)
         if (Int(arc4random_uniform(100)) + 1) <= tmp {
@@ -94,13 +96,16 @@ class GameViewController: UIViewController {
         }
     }
     
+    // Handle player loss
     func lose() {
         print("gameover!")
         updateTimer?.invalidate()
         performSegueWithIdentifier(Segue.GameToPost.rawValue, sender: self)
     }
     
+    // Update function executes at 'updateInterval' seconds
     func update() {
+        // Players score has increased. Increase difficulty
         if score > previousScore {
             previousScore = score
             if maxDelayTime * delayTimeReductionFactor > minDelayTime {
@@ -110,6 +115,8 @@ class GameViewController: UIViewController {
                 maxDelayTime *= timeToPressReductionFactor
             }
         }
+        
+        // Handle game states
         
         if currentState == GameState.WaitingForButton {
             if timeLeftToDelay <= 0 {
@@ -146,6 +153,8 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - UI Action Methods
     
     @IBAction func didPressButton(sender: AnyObject) {
         if currentState == GameState.WaitingForButton {

@@ -34,6 +34,7 @@ class TransitionViewController: UIViewController {
         return true
     }
     
+    // Handle transition
     func transition(type: String) {
         if mode == "modeselect" {
             performSegueWithIdentifier(Segue.TransitionToGame.rawValue, sender: type)
@@ -41,6 +42,8 @@ class TransitionViewController: UIViewController {
             performSegueWithIdentifier(Segue.TransitionToHowto.rawValue, sender: type)
         }
     }
+    
+    // MARK: - UI Action Methods
     
     @IBAction func didPressBackButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: {})

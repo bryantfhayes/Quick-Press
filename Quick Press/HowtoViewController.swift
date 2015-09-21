@@ -17,6 +17,7 @@ class HowtoViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    // Messages for 'HOWTO' menu
     let gameDescriptions: NSDictionary = ["Classic" : "In this mode your goal is to press the orange button when it lights up as fast as you can, too so and you lose. Be careful not to press the button if it turns red though!","Burst" : "In this new mode a series of buttons will flash on and off in a particular order. Once finished you will have to press the buttons yourself in the same order as quickly as you can, to slow and you lose!","Speed" : "This mode is similar to Classic but instead of just one button being lit at a time, multiple will light up and you have to press them as quickly as possible. If one button stays orange for too long, oyu lose!"]
     
     var mode: String?
@@ -37,6 +38,8 @@ class HowtoViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    // MARK: - UIAction Methods
     
     @IBAction func didPressBackButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: {})
